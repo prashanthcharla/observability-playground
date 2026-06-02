@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: spring-monitoring-demo
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, metrics, prometheus
+
+  metrics:
+    tags:
+      application: ${spring.application.name}
